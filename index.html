@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered GIF with Custom Text</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e2f; /* solid background */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    }
+
+    .line {
+      width: 100%;
+      height: 4px;
+      background-color: #ffffff33;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .gif {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: 2rem; /* custom font size */
+      font-weight: 600; /* semi-bold */
+      letter-spacing: 1px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="line"></div>
+  
+  <div class="content">
+    <img class="gif" src="your-gif.gif" alt="Centered GIF">
+    <div class="text">Your custom styled text here</div>
+  </div>
+  
+  <div class="line"></div>
+</body>
+</html>
