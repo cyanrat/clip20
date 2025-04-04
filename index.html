@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Centered GIF with Custom Text</title>
-  <!-- Google Font -->
-  <link href="Stepalange-x3BLm.otf" rel="stylesheet">
+  <title>Centered GIF with Local Font</title>
   <style>
+    @font-face {
+      font-family: 'MyFont';
+      src: url('fonts/MyFont-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #1e1e2f; /* solid background */
+      background-color: #1e1e2f;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      font-family: 'MyFont', sans-serif;
       color: white;
     }
 
@@ -36,8 +42,8 @@
     }
 
     .text {
-      font-size: 2rem; /* custom font size */
-      font-weight: 600; /* semi-bold */
+      font-size: 2rem;
+      font-weight: normal;
       letter-spacing: 1px;
       line-height: 1.4;
     }
@@ -48,7 +54,7 @@
   
   <div class="content">
     <img class="gif" src="your-gif.gif" alt="Centered GIF">
-    <div class="text">Your custom styled text here</div>
+    <div class="text">Text using a local font</div>
   </div>
   
   <div class="line"></div>
