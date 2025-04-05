@@ -80,25 +80,57 @@
   </script>
 
   <!-- 4 GIF containers -->
-  <img src="Spin.gif" class="gif" id="gif1">
-  <img src="Spin.gif" class="gif" id="gif2">
-  <img src="Spin.gif" class="gif" id="gif3">
-  <img src="Spin.gif" class="gif" id="gif4">
+ <!-- 32 GIF containers -->
+<img src="Spin.gif" class="gif" id="gif1">
+<img src="Spin.gif" class="gif" id="gif2">
+<img src="Spin.gif" class="gif" id="gif3">
+<img src="Spin.gif" class="gif" id="gif4">
+<img src="Spin.gif" class="gif" id="gif5">
+<img src="Spin.gif" class="gif" id="gif6">
+<img src="Spin.gif" class="gif" id="gif7">
+<img src="Spin.gif" class="gif" id="gif8">
+<img src="Spin.gif" class="gif" id="gif9">
+<img src="Spin.gif" class="gif" id="gif10">
+<img src="Spin.gif" class="gif" id="gif11">
+<img src="Spin.gif" class="gif" id="gif12">
+<img src="Spin.gif" class="gif" id="gif13">
+<img src="Spin.gif" class="gif" id="gif14">
+<img src="Spin.gif" class="gif" id="gif15">
+<img src="Spin.gif" class="gif" id="gif16">
+<img src="Spin.gif" class="gif" id="gif17">
+<img src="Spin.gif" class="gif" id="gif18">
+<img src="Spin.gif" class="gif" id="gif19">
+<img src="Spin.gif" class="gif" id="gif20">
+<img src="Spin.gif" class="gif" id="gif21">
+<img src="Spin.gif" class="gif" id="gif22">
+<img src="Spin.gif" class="gif" id="gif23">
+<img src="Spin.gif" class="gif" id="gif24">
+<img src="Spin.gif" class="gif" id="gif25">
+<img src="Spin.gif" class="gif" id="gif26">
+<img src="Spin.gif" class="gif" id="gif27">
+<img src="Spin.gif" class="gif" id="gif28">
+<img src="Spin.gif" class="gif" id="gif29">
+<img src="Spin.gif" class="gif" id="gif30">
+<img src="Spin.gif" class="gif" id="gif31">
+<img src="Spin.gif" class="gif" id="gif32">
+
 
   <script>
-    function randomizePosition(gifId) {
-      const el = document.getElementById(gifId);
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
-      const x = Math.random() * (vw - 90); // assuming 150px width
-      const y = Math.random() * (vh - 90);
-      el.style.left = `${x}px`;
-      el.style.top = `${y}px`;
-    }
+  function randomizePosition(gifId) {
+    const el = document.getElementById(gifId);
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const x = Math.random() * (vw - 90); // adjust based on gif size
+    const y = Math.random() * (vh - 90);
+    el.style.left = `${x}px`;
+    el.style.top = `${y}px`;
+  }
 
-    window.addEventListener('load', () => {
-      ['gif1', 'gif2', 'gif3', 'gif4'].forEach(id => randomizePosition(id));
-    });
-  </script>
+  window.addEventListener('load', () => {
+    for (let i = 1; i <= 32; i++) {
+      randomizePosition(`gif${i}`);
+    }
+  });
+</script>
 </body>
 </html>
