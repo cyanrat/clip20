@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Groove</title>
-  <style>
+   <style>
     @font-face {
       font-family: 'OldEnglish';
       src: url('OldEnglish.ttf') format('truetype');
@@ -18,17 +18,28 @@
     }
 
     body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #1e1e2f, #2b1e3f, #3f1e4f, #1e2f3f);
-  background-size: 400% 400%;
-  animation: gradientDance 12s ease infinite;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e1e2f, #2b1e3f, #3f1e4f, #1e2f3f);
+      background-size: 400% 400%;
+      animation: gradientDance 12s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      position: relative;
+      font-family: 'OldEnglish';
+      color: white;
+    }
+
     .gif-container {
       max-width: 400px;
       max-height: 380px;
@@ -38,6 +49,20 @@
       overflow: hidden;
       margin: 100px;
     }
+
+    .gif-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .desc {
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-size: 24px;
+    }
+
     .gif {
       position: absolute;
       width: 80px;
@@ -45,38 +70,29 @@
       z-index: 1;
       pointer-events: none;
       animation: bounce 2.5s ease-in-out infinite;
-}
-
-    .gif-container img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
     }
-     .desc {
-      text-align: center;
-      padding: 20px;
-      color: white;
-      font-size: 24px;
-      z-index: 2;
-    .main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
-  position: relative;
-  font-family: 'OldEnglish';
-  color: white;
-}
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes gradientDance {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
   </style>
 </head>
 <body> 
- <div class="main-content">
-  <div class="gif-container">
-    <img src="Yassa.gif" alt="Big GIF">
-  </div>
+  <div class="main-content">
+    <div class="gif-container">
+      <img src="Yassa.gif" alt="Big GIF">
+    </div>
 
-  <div class="desc">
-    Selamat Kepala 2!
+    <div class="desc">
+      Selamat Kepala 2!
+    </div>
   </div>
   <!-- Moved audio into body -->
   <audio autoplay loop>
