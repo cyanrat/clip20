@@ -70,5 +70,27 @@
       localStorage.setItem('isAudioPlaying', 'false');
     });
   </script>
+
+  <!-- 4 GIF containers -->
+  <img src="Spin.gif" class="gif" id="gif1">
+  <img src="Spin.gif" class="gif" id="gif2">
+  <img src="Spin.gif" class="gif" id="gif3">
+  <img src="Spin.gif" class="gif" id="gif4">
+
+  <script>
+    function randomizePosition(gifId) {
+      const el = document.getElementById(gifId);
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const x = Math.random() * (vw - 150); // assuming 150px width
+      const y = Math.random() * (vh - 150);
+      el.style.left = `${x}px`;
+      el.style.top = `${y}px`;
+    }
+
+    window.addEventListener('load', () => {
+      ['gif1', 'gif2', 'gif3', 'gif4'].forEach(id => randomizePosition(id));
+    });
+  </script>
 </body>
 </html>
